@@ -281,8 +281,8 @@ const MobileProjectsSection = () => {
             Apps I've <span className="text-deep-orange">Crafted</span>
           </h2>
           <p className="font-inter text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mx-auto">
-            Mobile experiences that live in your pocket. Each app tells a story, 
-            solves a problem, and brings ideas to life through code and creativity.
+            Mobile experiences built for your pocket, designed with care and
+            each one solving real problems and turning ideas into reality.
           </p>
         </motion.div>
 
