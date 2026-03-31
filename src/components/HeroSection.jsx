@@ -60,77 +60,60 @@ const HeroSection = () => {
     <section className="min-h-screen bg-cream relative overflow-hidden">
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Small filled square - top left */}
         <motion.div 
-          className="absolute top-20 left-4 md:left-20 w-3 h-3 md:w-4 md:h-4 bg-green-400 rounded-full"
+          className="absolute top-20 left-4 md:left-20 w-3 h-3 md:w-4 md:h-4 bg-deep-orange"
           animate={{ 
             y: [0, -20, 0],
-            x: [0, 10, 0] 
+            x: [0, 10, 0],
+            rotate: [0, 90, 0]
           }}
-          transition={{ 
-            duration: 4, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
+        {/* Circle outline - top right */}
         <motion.div 
-          className="absolute top-40 right-8 md:right-32 w-4 h-4 md:w-6 md:h-6 border-2 border-yellow-400 rounded-full"
+          className="absolute top-40 right-8 md:right-32 w-5 h-5 md:w-7 md:h-7 border-2 border-black rounded-full"
           animate={{ 
             rotate: 360,
             scale: [1, 1.2, 1] 
           }}
-          transition={{ 
-            duration: 6, 
-            repeat: Infinity, 
-            ease: "linear" 
-          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
         />
+        {/* Horizontal bar - bottom left */}
         <motion.div 
-          className="absolute bottom-40 left-8 md:left-32 w-6 h-1.5 md:w-8 md:h-2 bg-purple-400 rounded-full"
+          className="absolute bottom-40 left-8 md:left-32 w-8 h-1 md:w-10 md:h-1.5 bg-black"
           animate={{ 
             rotate: [0, 180, 360],
             y: [0, -15, 0] 
           }}
-          transition={{ 
-            duration: 5, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
+        {/* Small dot - center top */}
         <motion.div 
-          className="absolute top-32 left-1/2 w-2.5 h-2.5 md:w-3 md:h-3 bg-pink-400 rounded-full"
+          className="absolute top-32 left-1/2 w-2 h-2 md:w-3 md:h-3 bg-deep-orange rounded-full"
           animate={{ 
             x: [0, 20, 0],
             y: [0, -10, 0] 
           }}
-          transition={{ 
-            duration: 3, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
+        {/* Square outline - bottom right */}
         <motion.div 
-          className="absolute bottom-32 right-4 md:right-20 w-4 h-4 md:w-5 md:h-5 border-2 border-orange-400 rounded-full"
+          className="absolute bottom-32 right-4 md:right-20 w-4 h-4 md:w-6 md:h-6 border-2 border-deep-orange"
           animate={{ 
             scale: [1, 1.3, 1],
-            rotate: [0, -180, 0] 
+            rotate: [0, 45, 0] 
           }}
-          transition={{ 
-            duration: 4, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
+        {/* Thin line - mid right */}
         <motion.div 
-          className="absolute top-1/2 right-8 md:right-40 w-5 h-0.5 md:w-6 md:h-1 bg-cyan-400 rounded-full"
+          className="absolute top-1/2 right-8 md:right-40 w-6 h-0.5 md:w-8 md:h-0.5 bg-black"
           animate={{ 
             rotate: [0, 90, 180, 270, 360],
             x: [0, -10, 0] 
           }}
-          transition={{ 
-            duration: 7, 
-            repeat: Infinity, 
-            ease: "linear" 
-          }}
+          transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
         />
       </div>
 
@@ -172,11 +155,6 @@ const HeroSection = () => {
             {link.name === 'Resume' && (
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-              </svg>
-            )}
-            {link.name === 'X (Twitter)' && (
-              <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             )}
           </motion.a>
@@ -231,7 +209,7 @@ const HeroSection = () => {
           >
             <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden bg-gradient-to-br from-deep-orange/20 to-cream/20 shadow-2xl">
               <img 
-                src="/Awwal.png"
+                src="/Images/Awwal2.png"
                 alt="Awwal Olaniyi - Mobile Application Developer"
                 className="w-full h-full object-cover object-top"
               />

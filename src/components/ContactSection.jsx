@@ -22,16 +22,26 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('https://formspree.io/f/mreoebpp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (err) {
+      setSubmitStatus('error')
+    } finally {
       setIsSubmitting(false)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', subject: '', message: '' })
-      
-      // Clear success message after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000)
-    }, 2000)
+      setTimeout(() => setSubmitStatus(null), 4000)
+    }
   }
 
   const containerVariants = {
@@ -142,8 +152,7 @@ const ContactSection = () => {
             Get In Touch
           </h2>
           <p className="font-inter text-base md:text-lg lg:text-xl text-black/70 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's create something amazing together.
+            Have a vision or bold idea? Let’s collaborate and turn it into something remarkable..
           </p>
         </motion.div>
 
@@ -319,6 +328,15 @@ const ContactSection = () => {
                   className="text-center p-3 md:p-4 bg-green-100 text-green-800 rounded-lg font-inter text-sm md:text-base"
                 >
                   ✅ Message sent successfully! I'll get back to you soon.
+                </motion.div>
+              )}
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center p-3 md:p-4 bg-red-100 text-red-800 rounded-lg font-inter text-sm md:text-base"
+                >
+                  ❌ Something went wrong. Please try again or email me directly.
                 </motion.div>
               )}
             </form>

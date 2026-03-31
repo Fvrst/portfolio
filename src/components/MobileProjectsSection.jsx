@@ -271,7 +271,7 @@ const MobileProjectsSection = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <motion.div 
           className="text-center mb-12 md:mb-20"
@@ -327,7 +327,7 @@ const MobileProjectsSection = () => {
         </motion.div>
 
         {/* Desktop: Regular Grid */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-8 items-center">
+        <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-8 items-start">
           {mobileProjects.map((project, index) => renderPhoneCard(project, index, false))}
         </div>
 

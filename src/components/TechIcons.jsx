@@ -107,3 +107,9 @@ export const WebSocketIcon = () => (
     <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13v6l5 3-1 1.73-6-3.73V7h2z"/>
   </svg>
 )
+
+export const FlutterFlowIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+    <path d="M4 2l6 6-6 6h4l6-6-6-6H4zm0 8l6 6-6 6h4l6-6-6-6H4z"/>
+  </svg>
+)

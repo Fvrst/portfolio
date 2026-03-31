@@ -22,9 +22,28 @@ const workExperience = [
   {
     id: 2,
     position: 'Mobile App Developer (Flutter)',
+    company: 'Ziada Global Ltd',
+    period: 'January 2021 – Present',
+    duration: '3+ years | Currently Active',
+    description: 'Led mobile application development at Ziada Global Ltd, building and maintaining cross-platform Flutter apps with a focus on performance, scalability, and seamless user experience.',
+    responsibilities: [
+      'Led end-to-end Flutter mobile app development across multiple product lines',
+      'Implemented clean architecture patterns for scalable and maintainable codebases',
+      'Collaborated with designers and backend engineers to deliver polished user experiences',
+      'Supervised code quality through structured reviews and best practices',
+      'Increased app performance and reduced crash rates by 30%',
+      'Improved user retention through optimized onboarding and UI flows'
+    ],
+    projects: ['Ziada Mobile App', 'Cross-Platform Flutter Solution', 'Performance Optimization Initiative'],
+    technologies: ['Flutter', 'Dart', 'Firebase', 'REST API', 'BLoC', 'Riverpod', 'Git', 'Figma'],
+    isActive: true
+  },
+  {
+    id: 3,
+    position: 'Mobile App Developer (Flutter)',
     company: 'TAF (Election Observer PWD Hub)',
     period: '2024',
-    duration: 'Contract | Nigeria',
+    duration: ' Nigeria',
     description: 'Contributed to the development of a real-time election monitoring system used during the Anambra State gubernatorial election, approved by INEC.',
     responsibilities: [
       'Built features for citizens to report and document election irregularities via media uploads',
@@ -38,7 +57,7 @@ const workExperience = [
     isActive: false
   },
   {
-    id: 3,
+    id: 4,
     position: 'Mobile App Developer (Flutter)',
     company: 'Spotzz Technologies',
     period: '06/2024 – 08/2024',
@@ -56,7 +75,7 @@ const workExperience = [
     isActive: false
   },
   {
-    id: 4,
+    id: 5,
     position: 'Mobile App Developer (Flutter)',
     company: 'TechNova',
     period: '12/2023 – 02/2024',
@@ -74,7 +93,7 @@ const workExperience = [
     isActive: false
   },
   {
-    id: 5,
+    id: 6,
     position: 'Mobile App Developer (Flutter)',
     company: 'NextGen Innovations',
     period: '08/2023 – 01/2024',
@@ -90,6 +109,25 @@ const workExperience = [
     projects: ['Codebase Re-architecture', 'Agile Development Process', 'Investor Demo App'],
     technologies: ['Flutter', 'Dart', 'Firebase', 'REST API', 'Provider', 'Git', 'JIRA'],
     isActive: false
+  },
+  {
+    id: 7,
+    position: 'Mobile App Developer (Flutter)',
+    company: 'DriveX',
+    period: '2025',
+    duration: '6 months (Contract)',
+    description: 'Built both the passenger and driver-side applications for DriveX, a modern ride-hailing platform. Delivered two production-ready Flutter apps with real-time tracking, payments, and seamless ride lifecycle management.',
+    responsibilities: [
+      'Developed cross-platform passenger and driver apps using Flutter & Dart',
+      'Implemented state management using Riverpod for scalable architecture',
+      'Integrated REST APIs for ride booking, user authentication, and payments',
+      'Built real-time ride request handling and background location tracking',
+      'Developed earnings dashboard and trip analytics for drivers',
+      'Handled error states, loading states, and network resilience'
+    ],
+    projects: ['DriveX Passenger App', 'DriveX Driver App', 'Real-time Ride Tracking', 'Earnings Dashboard'],
+    technologies: ['Flutter', 'Dart', 'Riverpod', 'REST API', 'Firebase', 'Google Maps', 'Git'],
+    isActive: false
   }
 ]
 
@@ -98,24 +136,17 @@ const WorkExperienceSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null)
   const detailsRef = useRef(null)
 
-  // Function to handle experience selection and mobile scroll
   const handleExperienceSelect = (experience) => {
     setSelectedExperience(experience)
-    
-    // Safer mobile scroll with error handling
     try {
       if (typeof window !== 'undefined' && window.innerWidth < 1024 && detailsRef.current) {
         setTimeout(() => {
           if (detailsRef.current) {
-            detailsRef.current.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            })
+            detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }
         }, 100)
       }
     } catch (error) {
-      // Silently handle any scroll errors
       console.log('Scroll error handled')
     }
   }
@@ -130,16 +161,14 @@ const WorkExperienceSection = () => {
         <div className="w-8 md:w-12 h-1 bg-white/30 mt-2"></div>
       </div>
 
-      <div 
-        className="max-w-7xl mx-auto py-16 md:py-20 relative z-10 px-4 md:px-8"
-      >
+      <div className="max-w-7xl mx-auto py-16 md:py-20 relative z-10 px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="font-space-grotesk font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6">
             My Work <span className="text-deep-orange">Experience</span>
           </h2>
           <p className="font-inter text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
-            Over 2 years of crafting high-performance mobile experiences across startups and established companies. 
+            Over 2 years of crafting high-performance mobile experiences across startups and established companies.
             Each role has shaped my expertise in building scalable, user-centric Flutter applications.
           </p>
         </div>
@@ -152,12 +181,12 @@ const WorkExperienceSection = () => {
               Companies & Roles
             </h3>
             <div className="space-y-3">
-              {workExperience.map((exp, index) => (
+              {workExperience.map((exp) => (
                 <div
                   key={exp.id}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 border ${
-                    selectedExperience.id === exp.id 
-                      ? 'bg-deep-orange/20 border-deep-orange text-white' 
+                    selectedExperience.id === exp.id
+                      ? 'bg-deep-orange/20 border-deep-orange text-white'
                       : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
                   }`}
                   onClick={() => handleExperienceSelect(exp)}
@@ -182,16 +211,12 @@ const WorkExperienceSection = () => {
           </div>
 
           {/* Experience Details - Right Side */}
-          <div 
-            ref={detailsRef}
-            className="lg:col-span-2 order-2 lg:order-2"
-          >
+          <div ref={detailsRef} className="lg:col-span-2 order-2 lg:order-2">
             {selectedExperience && (
-              <div 
+              <div
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10"
                 key={`experience-${selectedExperience.id}`}
               >
-                {/* Header */}
                 <div className="mb-6">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <h3 className="font-space-grotesk font-bold text-2xl md:text-3xl">
@@ -213,22 +238,17 @@ const WorkExperienceSection = () => {
                   </div>
                 </div>
 
-                {/* Description */}
                 <p className="font-inter text-white/80 leading-relaxed mb-6">
                   {selectedExperience.description}
                 </p>
 
-                {/* Key Responsibilities */}
                 <div className="mb-6">
                   <h5 className="font-space-grotesk font-semibold text-lg mb-3 text-white">
                     Key Responsibilities
                   </h5>
                   <div className="grid md:grid-cols-2 gap-2">
                     {selectedExperience.responsibilities && selectedExperience.responsibilities.map((responsibility, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start gap-3"
-                      >
+                      <div key={index} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 bg-deep-orange rounded-full mt-2 flex-shrink-0"></div>
                         <span className="font-inter text-sm text-white/70 leading-relaxed">
                           {responsibility}
@@ -238,7 +258,6 @@ const WorkExperienceSection = () => {
                   </div>
                 </div>
 
-                {/* Projects */}
                 <div className="mb-6">
                   <h5 className="font-space-grotesk font-semibold text-lg mb-3 text-white">
                     Key Projects
@@ -255,7 +274,6 @@ const WorkExperienceSection = () => {
                   </div>
                 </div>
 
-                {/* Technologies */}
                 <div className="mb-6">
                   <h5 className="font-space-grotesk font-semibold text-lg mb-3 text-white">
                     Technologies Used
@@ -279,9 +297,9 @@ const WorkExperienceSection = () => {
         {/* Stats Section */}
         <div className="mt-16 md:mt-20 grid md:grid-cols-4 gap-6">
           {[
-            { number: '2+', label: 'Years Experience' },
-            { number: '10+', label: 'Apps Delivered' },
-            { number: '5+', label: 'Companies Worked With' },
+            { number: '5+', label: 'Years Experience' },
+            { number: '15+', label: 'Apps Delivered' },
+            { number: '7+', label: 'Companies Worked With' },
             { number: '90%', label: 'Bug Reduction Achieved' }
           ].map((stat, index) => (
             <div

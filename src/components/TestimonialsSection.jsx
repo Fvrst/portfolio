@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
                       {testimonial.name}
                     </h4>
                     <p className="font-inter text-xs text-black/70">
-                      {testimonial.position} at {testimonial.company}
+                      {testimonial.position}
                     </p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const TestimonialsSection = () => {
                       {testimonial.name}
                     </h4>
                     <p className="font-inter text-xs text-black/70">
-                      {testimonial.position} at {testimonial.company}
+                      {testimonial.position}
                     </p>
                   </div>
                 </div>

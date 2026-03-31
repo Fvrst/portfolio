@@ -1,9 +1,18 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { skills } from '../data/portfolioData'
 
 const SkillsSection = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    if (hoveredSkill) return
+    const interval = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % skills.length)
+    }, 1200)
+    return () => clearInterval(interval)
+  }, [hoveredSkill])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -76,7 +85,7 @@ const SkillsSection = () => {
             <h3 className="font-space-grotesk font-medium text-white text-sm md:text-lg">
               Building cool stuff with{' '}
               <span className="text-deep-orange font-semibold">
-                {hoveredSkill || 'amazing tools'}
+                {hoveredSkill || skills[activeIndex].name}
               </span>
             </h3>
           </motion.div>
@@ -100,10 +109,16 @@ const SkillsSection = () => {
               </motion.div>
               <motion.div
                 className="text-xs font-inter text-gray-400 group-hover:text-white transition-colors duration-300"
-                animate={{ opacity: hoveredSkill === skill.name ? 1 : 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                {skill.name}
+                <motion.span
+                  key={skill.name + (hoveredSkill === skill.name ? '-hover' : (skills[activeIndex]?.name === skill.name ? '-active' : ''))}
+                  animate={{ color: hoveredSkill === skill.name || skills[activeIndex]?.name === skill.name ? '#FF6B35' : '#9CA3AF' }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {skill.name}
+                </motion.span>
               </motion.div>
             </motion.div>
           ))}

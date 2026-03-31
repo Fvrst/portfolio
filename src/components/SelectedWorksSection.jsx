@@ -318,7 +318,7 @@ const SelectedWorksSection = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="font-space-grotesk font-bold text-2xl md:text-4xl lg:text-5xl text-black mb-2 md:mb-3">
-          Web Projects I've <span className="text-deep-orange">Built</span>
+          Projects <span className="text-deep-orange">Gallery</span>
         </h2>
         <motion.p 
           className="font-inter text-xs md:text-base text-black/60"
@@ -326,7 +326,7 @@ const SelectedWorksSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Full-stack web applications crafted with passion and purpose
+          Mobile applications crafted with passion and purpose
         </motion.p>
       </motion.div>
 
@@ -381,7 +381,7 @@ const SelectedWorksSection = () => {
                           className="bg-cream px-4 md:px-6 py-2 md:py-3 rounded-full font-space-grotesk font-semibold text-sm md:text-base"
                           whileHover={{ scale: 1.1 }}
                         >
-                          View Project
+                          View App
                         </motion.div>
                       </div>
                     </div>
@@ -433,7 +433,7 @@ const SelectedWorksSection = () => {
                           whileTap={{ scale: 0.95 }}
                           onClick={() => handleProjectClick(project.id)}
                         >
-                          View Project
+                          View App
                         </motion.button>
                       </motion.div>
                     </motion.div>
