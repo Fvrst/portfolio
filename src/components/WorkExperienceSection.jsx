@@ -168,7 +168,7 @@ const WorkExperienceSection = () => {
             My Work <span className="text-deep-orange">Experience</span>
           </h2>
           <p className="font-inter text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
-            Over 2 years of crafting high-performance mobile experiences across startups and established companies.
+            Over 3 years of crafting high-performance mobile experiences across startups and established companies.
             Each role has shaped my expertise in building scalable, user-centric Flutter applications.
           </p>
         </div>
@@ -297,7 +297,7 @@ const WorkExperienceSection = () => {
         {/* Stats Section */}
         <div className="mt-16 md:mt-20 grid md:grid-cols-4 gap-6">
           {[
-            { number: '5+', label: 'Years Experience' },
+            { number: '3+', label: 'Years Experience' },
             { number: '15+', label: 'Apps Delivered' },
             { number: '7+', label: 'Companies Worked With' },
             { number: '90%', label: 'Bug Reduction Achieved' }
