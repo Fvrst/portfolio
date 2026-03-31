@@ -24,7 +24,7 @@ const workExperience = [
     position: 'Mobile App Developer (Flutter)',
     company: 'Ziada Global Ltd',
     period: 'January 2021 – Present',
-    duration: '3+ years | Currently Active',
+    duration: 'Currently Active',
     description: 'Led mobile application development at Ziada Global Ltd, building and maintaining cross-platform Flutter apps with a focus on performance, scalability, and seamless user experience.',
     responsibilities: [
       'Led end-to-end Flutter mobile app development across multiple product lines',
