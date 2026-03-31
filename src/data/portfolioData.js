@@ -352,6 +352,16 @@ export const testimonials = [
     testimonial: 'Awwal is a strong team player with excellent communication skills, making collaboration seamless across teams. He approaches development with clarity and purpose, consistently delivering solutions that align with both user needs and project goals.',
     project: 'Mobile Development',
     date: '2024'
+  },
+  {
+    id: 3,
+    name: 'Idris Desmond Adedeji',
+    position: 'UI/UX Designer',
+    image: '/Images/testimonials/avatar3.jpg',
+    rating: 5,
+    testimonial: 'Awwal is the kind of developer every designer hopes to work with. He doesn\'t just build interfaces—he elevates them. His attention to detail, deep understanding of user experience, and ability to translate design into fluid, high-performing apps is exceptional. Every collaboration with him results in a product that feels both intentional and refined.',
+    project: 'Product Design & Mobile Development',
+    date: '2024'
   }
 ];
 
