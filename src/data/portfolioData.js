@@ -325,7 +325,7 @@ export const socialLinks = [
   },
   {
     name: 'Resume',
-    url: '#',
+    url: '/Olaniyi_Awwal_Mobile_Developer_Resume.pdf',
     icon: 'document'
   }
 ];

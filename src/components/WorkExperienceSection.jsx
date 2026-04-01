@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 const workExperience = [
   {
     id: 1,
-    position: 'Mobile App Developer (Flutter)',
+    position: 'Mobile App Developer',
     company: 'Special Man Global Solution LTD',
     period: '2024 – Present',
     duration: 'Ongoing | Lagos, Nigeria',
@@ -21,9 +21,9 @@ const workExperience = [
   },
   {
     id: 2,
-    position: 'Mobile App Developer (Flutter)',
+    position: 'Mobile App Developer',
     company: 'Ziada Global Ltd',
-    period: 'January 2022 – Present',
+    period: 'March 2021 – Present',
     duration: 'Currently Active',
     description: 'Led mobile application development at Ziada Global Ltd, building and maintaining cross-platform Flutter apps with a focus on performance, scalability, and seamless user experience.',
     responsibilities: [
@@ -40,9 +40,9 @@ const workExperience = [
   },
   {
     id: 3,
-    position: 'Mobile App Developer (Flutter)',
+    position: 'Mobile App Developer',
     company: 'TAF (Election Observer PWD Hub)',
-    period: '2024',
+    period: '2025',
     duration: ' Nigeria',
     description: 'Contributed to the development of a real-time election monitoring system used during the Anambra State gubernatorial election, approved by INEC.',
     responsibilities: [
@@ -60,8 +60,8 @@ const workExperience = [
     id: 4,
     position: 'Mobile App Developer (Flutter)',
     company: 'Spotzz Technologies',
-    period: '06/2024 – 08/2024',
-    duration: '3 months (Contract)',
+    period: 'June 2024 – August 2024',
+    duration: '3 months ',
     description: 'Architected merchant-facing dashboards and led end-to-end REST API integrations, improving operational efficiency and data flow reliability.',
     responsibilities: [
       'Architected and developed merchant-facing dashboards for real-time seller interaction',
@@ -78,8 +78,8 @@ const workExperience = [
     id: 5,
     position: 'Mobile App Developer (Flutter)',
     company: 'TechNova',
-    period: '12/2023 – 02/2024',
-    duration: '3 months (Contract) | Austin, Texas, USA',
+    period: 'December 2023 – March 2024',
+    duration: '3 months  | Austin, Texas, USA',
     description: 'Transformed a low-performing mobile application by restructuring API architecture and integrating a secure payment gateway, reducing API latency by 25–40%.',
     responsibilities: [
       'Restructured API architecture and optimized network requests, reducing latency by 25–40%',
@@ -96,8 +96,8 @@ const workExperience = [
     id: 6,
     position: 'Mobile App Developer (Flutter)',
     company: 'NextGen Innovations',
-    period: '08/2023 – 01/2024',
-    duration: '6 months (Contract)',
+    period: 'August 2023 – April 2024',
+    duration: '6 months ',
     description: 'Re-architected a disorganized codebase into a clean, modular, scalable architecture achieving a 90% reduction in bugs and leading development using agile methodologies.',
     responsibilities: [
       'Re-architected codebase into clean, modular architecture — 90% reduction in bugs',
@@ -115,7 +115,7 @@ const workExperience = [
     position: 'Mobile App Developer (Flutter)',
     company: 'DriveX',
     period: '2025',
-    duration: '6 months (Contract)',
+    duration: '6 months',
     description: 'Built both the passenger and driver-side applications for DriveX, a modern ride-hailing platform. Delivered two production-ready Flutter apps with real-time tracking, payments, and seamless ride lifecycle management.',
     responsibilities: [
       'Developed cross-platform passenger and driver apps using Flutter & Dart',
@@ -168,7 +168,7 @@ const WorkExperienceSection = () => {
             My Work <span className="text-deep-orange">Experience</span>
           </h2>
           <p className="font-inter text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto">
-            Over 3 years of crafting high-performance mobile experiences across startups and established companies.
+            Over 5 years of crafting high-performance mobile experiences across startups and established companies.
             Each role has shaped my expertise in building scalable, user-centric Flutter applications.
           </p>
         </div>
@@ -297,7 +297,7 @@ const WorkExperienceSection = () => {
         {/* Stats Section */}
         <div className="mt-16 md:mt-20 grid md:grid-cols-4 gap-6">
           {[
-            { number: '3+', label: 'Years Experience' },
+            { number: '5+', label: 'Years Experience' },
             { number: '15+', label: 'Apps Delivered' },
             { number: '7+', label: 'Companies Worked With' },
             { number: '90%', label: 'Bug Reduction Achieved' }

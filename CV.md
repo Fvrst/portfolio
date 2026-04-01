@@ -93,7 +93,7 @@ low-bandwidth conditions.
 National Electoral Commission (INEC), demonstrating
 real-world deployment in a high-stakes environment.
 Spotzz Technologies
-Mobile App Developer (Flutter)(Contract)
+Mobile App Developer (Flutter)
 06/2024 – 08/2024
 •Architected and developed merchant-facing dashboards,
 enabling real-time seller interaction and improving
@@ -111,7 +111,7 @@ application responsiveness.
 to higher user engagement and smoother in-app
 navigation.
 TechNova
-Mobile App Developer (Flutter)(Contract)
+Mobile App Developer (Flutter)
 12/2023 – 02/2024 | Austin, Texas, USA
 •Transformed a low-performing mobile application by
 restructuring API architecture and optimizing network
@@ -135,7 +135,7 @@ Engineer)
 kolenzy360@gmail.com,
 +234 8162021449
 NextGen Innovations
-Mobile App Developer (Flutter)(Contract)
+Mobile App Developer (Flutter)
 08/2023 – 01/2024
 •Re-architected a disorganized codebase into a clean,
 modular, and scalable architecture, achieving a 90%
