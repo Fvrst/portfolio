@@ -78,7 +78,7 @@ const SkillsSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
           {/* First special item */}
           <motion.div
-            className="col-span-2 bg-gray-900 border border-gray-700 p-4 md:p-6 rounded-lg flex items-center justify-start text-left min-h-[100px] md:min-h-[120px] hover:bg-gray-800 transition-colors duration-300"
+            className="col-span-2 bg-deep-orange/20 border border-deep-orange/40 p-4 md:p-6 rounded-lg flex items-center justify-start text-left min-h-[100px] md:min-h-[120px] hover:bg-deep-orange/30 transition-colors duration-300"
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
           >
@@ -94,7 +94,7 @@ const SkillsSection = () => {
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
-              className="bg-gray-900 border border-gray-700 p-3 md:p-6 rounded-lg flex flex-col items-center justify-center text-center min-h-[100px] md:min-h-[120px] hover:bg-gray-800 transition-colors duration-300 cursor-pointer group"
+              className="bg-deep-orange/20 border border-deep-orange/40 p-3 md:p-6 rounded-lg flex flex-col items-center justify-center text-center min-h-[100px] md:min-h-[120px] hover:bg-deep-orange/30 transition-colors duration-300 cursor-pointer group"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               onMouseEnter={() => setHoveredSkill(skill.name)}
